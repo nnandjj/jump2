@@ -33,7 +33,7 @@ $(document).ready(function() {
           $login.addClass("inactive");
           animating = false;
           $(that).removeClass("success processing");
-          window.location.replace("https://nnandjj.github.io/jump/show.html");
+          window.location.replace("https://nnandjj.github.io/jump2/list.html");
         }, submitPhase2);
       }, submitPhase1);
     }
