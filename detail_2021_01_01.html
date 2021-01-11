@@ -12,6 +12,11 @@
 	</head>
 
 	<body class="home blog custom-background round-avatars" itemscope itemtype="http://schema.org/Organization">
+		<div>
+			<audio id="music" src="statics/musics/爱很简单.mp3" autoplay="autoplay" loop>浏览器不支持</audio>
+			<a id="audio_btn" style="position: fixed;right: 20px;top: 20px;z-index: 999;"><img src="statics/images/play.gif" width="48" height="50" id="music_btn" border="0"></a>
+		</div>
+		
 		<div class="Yarn_Background" style="background-image: url( statics/images/bg.jpeg);"></div>
 		<header id="masthead" class="overlay animated from-bottom" itemprop="brand" itemscope itemtype="http://schema.org/Brand">
 			<!-- .site-branding -->
@@ -50,13 +55,15 @@
 							<h1 class="post_title">给我的小猪猪</h1>
 						</header>
 						<div class="post-body js-gallery">
-							<p>　　我的猪猪</p>
-							<p>　　我的猪猪</p>
-							<p>　　我的猪猪</p>
-							<p><span class="yellow-under">ONE MORE THING</span></p>
-							<p>　　我的猪猪</p>
-							<p>　　我的猪猪</p>
-							<p>　　我的猪猪</p>
+							<p>我的小乖乖，</p>
+							<p>　　时间真的过的好快，但是我好像还是没能成为一个合格的男朋友，总是惹猪生气，很多地方都搞不明白，不知所措。每一次被乖乖说的时候，我真的很内疚，知道没有做好，但是我真的很想照顾好你，好好对你。</p>
+							<p>　　还记得第一次在楼梯间，你把小猪蹄伸给我，让我牵，当时激动了好久，牵个手竟然如此幸福。</p>
+							<p>　　还记得第一次在体育馆，我胆子就突然大起来，亲了小猪猪，感觉真的很奇妙。(不过乖乖好像有点生气，但是还是接受了被猪拱了的事实)</p>
+							<p>　　还有那段时间，政策改了，我感觉我的整片天空都黑暗了，天快要塌下来了。不过我习惯了什么事都自己扛着，想到这些年我的好多努力全都白费了，都没用了，整个人都颓废了。什么也不想干，连最后的挣扎也没起到一丝的作用。等我最后挣扎着把材料交完，小宝贝已经等了我好久好久。我出来了就一直打电话，不过乖乖那信号不好一直联系不上，我真的好慌。终于还是找到了乖乖，真的好想一直抱着你，什么也不想做，只想要抱着你。心里真的装着好多好多的委屈，我感觉我终于还是扛不住了。本来还说要好好照顾你，却连自己也照顾不好，啥也不行。</p>
+							<p>　　真的很幸运能够遇到你，和你一起。</p>
+							<p>　　真的很感谢乖乖能够一直陪着我。</p>
+							<p>　　我真的要努力变好，真的想和你一起变得很好很好。然后我们一直走下去。对了，这首歌我录了好多遍，但是好像还是不怎么好听</p>
+							<p>　　然后就是我想做的这个卡片。我们可以制定些规则来使用，然后我们把每一次使用都记录下来，看看我们都用来做啥了。</p>
 						</div>
 						<div class="meta split split--responsive cf">
 							<div class="split__title">
@@ -69,10 +76,6 @@
 			</div>
 			<div class="wrapper">
 			</div>
-		</div>
-
-		<div class="p-header">
-			<figure class="p-image" style="background-image: url(statics/images/47fb3c_9afed6c259f94589881bd55376206366mv2_d_3840_5784_s_4_2.jpg);"></figure>
 		</div>
 
 		<footer id="footer" class="overlay animated from-top">
@@ -88,24 +91,26 @@
 					<path d="M48 48 L50 51 L52 48 L48 48" fill="rgba(255,255,255, 1)"></path>
 				</svg>
 			</div>
-			<script type="text/javascript">
-				window.onscroll = function() {
-					var scrollTop = document.body.scrollTop;
-					if(scrollTop >= 200) {
-						document.getElementById("NextPrevPosts").style.display = "none"
-					} else {
-						document.getElementById("NextPrevPosts").style.display = "block"
-					}
-				}
-			</script>
+
 			<script type='text/javascript' src='statics/js/jquery.min.js'></script>
 			<script type='text/javascript' src='statics/js/plugins.js'></script>
 			<script type='text/javascript' src='statics/js/script.js'></script>
 			<script type='text/javascript' src='statics/js/particles.js'></script>
 			<script type='text/javascript' src='statics/js/aos.js'></script>
 			<script type='text/javascript' src='statics/js/prism.js'></script>
-			<script type='text/javascript' src='statics/js/gravatar.js'></script>
-
+			<!-- <script type='text/javascript' src='statics/js/gravatar.js'></script> -->
+			<script>
+				$("#audio_btn").click(function(){
+					var music = document.getElementById("music");
+					if(music.paused){
+						music.play();
+						$("#music_btn").attr("src","statics/images/play.gif");
+					}else{
+						music.pause();
+						$("#music_btn").attr("src","statics/images/pause.gif");
+					}
+				});
+			</script>
 	</body>
 
 </html>
